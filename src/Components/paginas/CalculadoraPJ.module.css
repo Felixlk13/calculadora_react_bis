@@ -1,0 +1,178 @@
+.container {
+    width: 450px;
+    background-color: rgba(65,105,226, 0.20);
+    backdrop-filter: blur(10px);
+    border: rgba(65,105,226, 0.20);
+    padding: 40px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(20, 20, 20);
+    margin-bottom: 30px;
+}
+
+
+.input {
+    position: relative;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.input input {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border: 2px solid rgba(245, 246, 247, 0.2);
+    border-radius: 15px;
+    font-size: 12px;
+    color: black;
+    padding: 20px 25px;
+    box-sizing: border-box;
+}
+
+.input input::placeholder {
+    color: rgb(20, 20, 20);
+}
+
+.input label {
+    font-size: 16px;
+    color: rgb(20, 20, 20);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.select {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px auto;
+}
+
+.select select {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 2px solid rgba(245, 246, 247, 0.2);
+    border-radius: 15px;
+    font-size: 12px;
+    color: black;
+    padding: 20px 25px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.select label {
+    font-size: 16px;
+    color: rgb(20, 20, 20);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.profissaoContainer {
+    margin: 30px 0;
+}
+
+.profissaoLabel {
+    color: rgb(20, 20, 20);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.profissaoCheckbox {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(245, 246, 247, 0.2);
+    border-radius: 15px;
+    padding: 15px 20px;
+}
+
+.profissaoCheckbox label {
+    color: rgb(20, 20, 20);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+}
+
+.profissaoCheckbox input[type="checkbox"] {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: rgb(65,105,226);
+}
+
+.checkbox {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox label {
+    color: rgb(20, 20, 20);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: rgb(65,105,226);
+}
+
+.submitButton {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    color: black;
+}
+
+.submitButton:hover {
+    background-color: rgb(122, 186, 243);
+}
+
+.input[data-dica] {
+  position: relative;
+}
+
+.input[data-dica]::after {
+  content: attr(data-dica);
+  position: absolute;
+
+  left: 105%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 230px;
+  background: rgba(65,105,226, 0.95);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.input:hover::after,
+.input:focus-within::after {
+  opacity: 1;
+}

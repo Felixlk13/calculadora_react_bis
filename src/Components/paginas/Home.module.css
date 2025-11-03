@@ -1,0 +1,86 @@
+.home_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4em;
+}
+
+.home_container h1 {
+    font-size: 2.5em;
+    margin-bottom: .5em;
+}
+
+.home_container h1 span {
+    color: white;
+    padding: 0 .2em;
+    background-color:  rgb(65,105,226);
+}
+
+.home_container p {
+    margin-bottom: 1.5em;
+    color: #7b7b7b;
+}
+
+.home_container img {
+    width: 350px;
+    height: 350px;
+    margin: 0.5em 0;
+
+}
+
+.container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  max-width: 750px;
+  width: 75%;
+}
+
+.h2 {
+  text-align: center;
+  color: rgb(65,105,226);
+  font-size: 1.5em;
+   margin-bottom: .5em;
+}
+
+.tabela_ir {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+.tabela_ir th {
+  background-color: #f2f4ff;
+  color: #333;
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e3f0;
+}
+
+.tabela_ir td {
+  padding: 12px;
+  border-bottom: 1px solid #e6e6e6;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.tabela_ir tbody tr:hover {
+  background-color: #f8faff;
+  transition: background 0.3s;
+}
+
+.tabela_ir .valor {
+  color:  rgb(65,105,226);
+  font-weight: 600;
+}
+
+.legenda {
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: center;
+}

@@ -1,0 +1,105 @@
+.sobre_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5em;
+}
+
+.sobre_container h1 {
+    font-size: 2.5em;
+    margin-bottom: .5em;
+}
+
+.sobre_container p {
+    margin-bottom: 1.5em;
+    color: black;
+}
+
+.container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  max-width: 750px;
+  width: 75%;
+  margin-bottom: 20px;
+}
+
+.h2 {
+  text-align: center;
+  color: rgb(65,105,226);
+  font-size: 1.5em;
+   margin-bottom: .5em;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+.tabela th {
+  background-color: #f2f4ff;
+  color: #333;
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e3f0;
+}
+
+.tabela td {
+  padding: 12px;
+  border-bottom: 1px solid #e6e6e6;
+  color: black;
+  font-size: 0.95rem;
+}
+
+.tabela tbody tr:hover {
+  background-color: #f8faff;
+  transition: background 0.3s;
+}
+
+.info {
+  background-color: #f2f4ff;
+  padding: 15px;
+  border-left: 4px solid rgb(65,105,226);
+  margin: 20px 0;
+  color: black;
+}
+
+.lista {
+  margin: 15px 0;
+  color: black;
+}
+
+.email {
+  color: rgb(65,105,226);
+  text-decoration: none;
+}
+
+.email:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(19, 0, 112);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  margin: 20px auto 0;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: rgb(156, 182, 255);
+}
+
