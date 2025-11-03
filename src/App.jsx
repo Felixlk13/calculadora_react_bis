@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './Components/paginas/Home';
 import Home2 from './Components/paginas/Home2';
 import Calculadoras from './Components/paginas/Calculadoras';
@@ -28,7 +28,6 @@ function AppContent() {
 
   // Verifica qual Navbar deve ser mostrada
   const showNavbar2 = navbar2Routes.includes(location.pathname.toLowerCase());
-  const showNavbar3 = navbar3Routes.includes(location.pathname.toLowerCase());
 
 return (
     <>
