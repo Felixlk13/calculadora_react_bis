@@ -105,7 +105,7 @@ function CalculadoraPJ() {
       </form>
 
       {resultado && (
-          <div className="style.resultado">
+          <div className={styles.resultado}>
             {resultado}
           </div>
         )}
