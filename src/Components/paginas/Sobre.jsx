@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Sobre.module.css';
 
 function Sobre() {
@@ -97,10 +96,10 @@ function Sobre() {
       </div>  
       <div className={styles.container}>
         <p>
-          <strong>Ficou com alguma dúvida ou quer mais informações? Entre em contato com o NAF clicando no botão abaixo ou envie para</strong> <a href="naf@gmail.com" className={styles.email}>naf@gmail.com</a>
+          Ficou com alguma dúvida ou quer mais informações? Entre em contato com o NAF clicando no botão abaixo ou envie email para <strong> naf01.dl@unichristus.edu.br </strong>
         </p>
         
-        <button className={styles.btn}>Entre em Contato</button>
+        <button className={styles.btn} onClick={() => window.open("https://www.instagram.com/naf.unichristus/", "_blank")}>Entre em Contato</button>
       </div>
     </section>
   );

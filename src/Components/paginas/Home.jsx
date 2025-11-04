@@ -1,4 +1,6 @@
 import styles from './Home.module.css';
+
+// Importa a imagem local (IrHome.png), que será exibida na página inicial.
 import savings from '../../img/IrHome.png';
 
 function Home() {

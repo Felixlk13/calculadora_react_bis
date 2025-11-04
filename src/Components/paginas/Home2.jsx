@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Home2.module.css';
-import savings from '../../img/calculadora.png';
 import { Link } from 'react-router-dom';
 
 

@@ -1,3 +1,4 @@
+/// Importa ícones de redes sociais (Facebook, Instagram, LinkedIn) vindos da biblioteca "react-icons/fa"
 import {FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa';
 
 import styles from './Footer.module.css'

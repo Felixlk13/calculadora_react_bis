@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FaUser, FaLock } from "react-icons/fa";
 import style from './Cadastro.module.css';
 
 function Cadastro(){

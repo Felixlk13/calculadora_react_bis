@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+
+// Importe das p·ginas do projeto
 import Home from './Components/paginas/Home';
 import Home2 from './Components/paginas/Home2';
-import Calculadoras from './Components/paginas/Calculadoras';
-import Contato from './Components/paginas/Contato';
 import Login from './Components/paginas/Login';
 import Cadastro from './Components/paginas/Cadastro';
 import EsqueceuSenha from './Components/paginas/EsqueceuSenha';
@@ -10,6 +10,7 @@ import CalculadoraPF from './Components/paginas/CalculadoraPF';
 import CalculadoraPJ from './Components/paginas/CalculadoraPJ';
 import Sobre from './Components/paginas/Sobre';
 
+// Importa dos componentes de layout
 import Container from './Components/layout/Container';
 import Navbar from './Components/layout/Navbar';
 import Navbar2 from './Components/layout/NavBar2';
@@ -20,10 +21,10 @@ import Footer from './Components/layout/Footer';
 function AppContent() {
   const location = useLocation()
 
-  // Rotas que usar√£o a Navbar2
+  // Rotas que usar„o a Navbar2
   const navbar2Routes = ['/sobre', '/calculadora-pf', '/calculadora-pj'];
 
-  // Rotas que usar√£o a Navbar3
+  // Rotas que usar„o a Navbar3
   const navbar3Routes = ['/home2'];
 
   // Verifica qual Navbar deve ser mostrada
@@ -43,8 +44,6 @@ return (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home2" element={<Home2 />} />
-          <Route path="/calculadoras" element={<Calculadoras />} />
-          <Route path="/contato" element={<Contato />} />
           <Route path="/login" element={<Login />} />
           <Route path="/esqueceusenha" element={<EsqueceuSenha />} />
           <Route path="/cadastro" element={<Cadastro />} />
