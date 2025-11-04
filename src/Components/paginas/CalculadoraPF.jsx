@@ -17,7 +17,7 @@ function CalculadoraPF() {
       let imposto = 0;
 
       if (calculoBase <= 2428.80){
-       setResultado(`Você está isento de impostos R$:${imposto}.`)
+       setResultado(`Você está isento de impostos.`)
       } 
        else if(calculoBase >= 2428.80 || calculoBase <= 2826.65){
         imposto = calculoBase * 0.075 - 182.16;
@@ -115,7 +115,7 @@ function CalculadoraPF() {
       </form>
 
       {resultado && (
-          <div className="style.resultado">
+          <div className={styles.resultado}>
             {resultado}
           </div>
         )}

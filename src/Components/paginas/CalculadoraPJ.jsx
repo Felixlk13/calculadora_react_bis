@@ -3,7 +3,6 @@ import styles from './CalculadoraPJ.module.css';
 
 function CalculadoraPJ() {
   const [rendaMensal, setRendaMensal] = useState("");
-  const [custosMensais, setCustosMensais] = useState("");
   const [cnpj, setCnpj] = useState("");
   const [profissao, setProfissao] = useState("psicologo");
   const [enviarEmail, setEnviarEmail] = useState("");
@@ -56,20 +55,6 @@ function CalculadoraPJ() {
             value={rendaMensal}
             onChange={(e) => setRendaMensal(e.target.value)}
             max="15000"
-            required
-          />
-        </div>
-
-        <div className={styles.input} data-dica="São os gastos necessários para seu trabalho acontecer, como aluguel, internet, energia, etc.">
-          <label htmlFor="custosMensais">Total de Custos Mensais:</label>
-          <input 
-            type="number" 
-            id="custosMensais"
-            name="custosMensais" 
-            placeholder="Digite seus custos mensais"
-            value={custosMensais}
-            onChange={(e) => setCustosMensais(e.target.value)}
-            min="0"
             required
           />
         </div>
