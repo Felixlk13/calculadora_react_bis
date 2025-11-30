@@ -23,6 +23,10 @@ function Navbar2() {
                         <button>Sobre</button>
                     </Link>
 
+                    <Link to="/comparacao-pf-pj">
+                        <button>Comparação</button>
+                    </Link>
+
                     <Link to="/">
                         <button>Sair</button>
                     </Link>

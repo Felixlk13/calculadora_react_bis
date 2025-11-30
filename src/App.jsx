@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
-// Importe das páginas do projeto
+// Importe das pï¿½ginas do projeto
 import Home from './Components/paginas/Home';
 import Home2 from './Components/paginas/Home2';
 import Login from './Components/paginas/Login';
@@ -8,6 +8,7 @@ import Cadastro from './Components/paginas/Cadastro';
 import EsqueceuSenha from './Components/paginas/EsqueceuSenha';
 import CalculadoraPF from './Components/paginas/CalculadoraPF';
 import CalculadoraPJ from './Components/paginas/CalculadoraPJ';
+import ComparacaoPFxPJ from './Components/paginas/ComparacaoPFxPJ';
 import Sobre from './Components/paginas/Sobre';
 
 // Importa dos componentes de layout
@@ -21,10 +22,10 @@ import Footer from './Components/layout/Footer';
 function AppContent() {
   const location = useLocation()
 
-  // Rotas que usarão a Navbar2
-  const navbar2Routes = ['/sobre', '/calculadora-pf', '/calculadora-pj'];
+  // Rotas que usarï¿½o a Navbar2
+  const navbar2Routes = ['/sobre', '/calculadora-pf', '/calculadora-pj', '/comparacao-pf-pj'];
 
-  // Rotas que usarão a Navbar3
+  // Rotas que usarï¿½o a Navbar3
   const navbar3Routes = ['/home2'];
 
   // Verifica qual Navbar deve ser mostrada
@@ -49,6 +50,7 @@ return (
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/calculadora-pf" element={<CalculadoraPF />} />
           <Route path="/calculadora-pj" element={<CalculadoraPJ />} />
+          <Route path="/comparacao-pf-pj" element={<ComparacaoPFxPJ />} />
           <Route path="/sobre" element={<Sobre />} />
         </Routes>
       </Container>
