@@ -9,6 +9,15 @@ function ComparacaoPFxPJ() {
   const [detalhesPF, setDetalhesPF] = useState(null);
   const [detalhesPJ, setDetalhesPJ] = useState(null);
 
+  const limparCampos = () => {
+    setRendaMensal("");
+    setCustosMensais("");
+    setResultadoPF(null);
+    setResultadoPJ(null);
+    setDetalhesPF(null);
+    setDetalhesPJ(null);
+  };
+
   const calcularComparacao = (e) => {
     e.preventDefault();
     let renda = parseFloat(rendaMensal);
@@ -136,6 +145,10 @@ function ComparacaoPFxPJ() {
 
         <button type="submit" className={styles.submitButton}>
           Qual a melhor opção?
+        </button>
+        
+        <button type="button" className={styles.limparButton} onClick={limparCampos}>
+          LIMPAR
         </button>
       </form>
 

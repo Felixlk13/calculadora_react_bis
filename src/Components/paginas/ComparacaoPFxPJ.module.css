@@ -74,24 +74,22 @@
 
 .limparButton {
     width: auto;
-    height: 30px;
-    background-color: transparent;
-    margin: 5px 0 20px 0;
-    border: 1px solid rgba(65,105,226, 0.5);
+    height: 35px;
+    background-color: rgb(65,105,226);
+    margin: 10px 0 0 0;
+    border: none;
     outline: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 13px;
+    font-weight: 600;
     transition: all 0.3s ease;
-    color: rgb(65,105,226);
-    padding: 5px 15px;
-    align-self: flex-start;
+    color: white;
+    padding: 8px 20px;
 }
 
 .limparButton:hover {
-    background-color: rgba(65,105,226, 0.1);
-    border-color: rgb(65,105,226);
+    background-color: rgb(122, 186, 243);
 }
 
 .comparacaoContainer {

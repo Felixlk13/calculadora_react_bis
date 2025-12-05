@@ -1,6 +1,45 @@
+import { useState } from 'react';
 import styles from './Sobre.module.css';
+import emailjs from '@emailjs/browser';
 
 function Sobre() {
+  const [showModal, setShowModal] = useState(false);
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [mensagem, setMensagem] = useState('');
+  const [emailEnviado, setEmailEnviado] = useState(false);
+
+  const abrirModal = () => {
+    setShowModal(true);
+  };
+
+  const fecharModal = () => {
+    setShowModal(false);
+    setNome('');
+    setEmail('');
+    setMensagem('');
+    setEmailEnviado(false);
+  };
+
+  const enviarEmail = (e) => {
+    e.preventDefault();
+    
+    const templateParams = {
+      from_name: nome,
+      email: email,
+      message: mensagem
+    };
+
+    emailjs.send("service_fxw81yu", "template_3lwh3tc", templateParams, "NnLrKMqI749jBLZyy")
+      .then((response) => {
+        console.log('Email enviado com sucesso!', response.status, response.text);
+        setEmailEnviado(true);
+      })
+      .catch((error) => {
+        console.error('Erro ao enviar email:', error);
+        alert('Erro ao enviar email. Tente novamente.');
+      });
+  };
   return (
     <section className={styles.sobre_container}>
       <h1>Como nossas Calculadoras funcionam</h1>
@@ -99,8 +138,70 @@ function Sobre() {
           Ficou com alguma dúvida ou quer mais informações? Entre em contato com o NAF clicando no botão abaixo ou envie email para <strong> naf01.dl@unichristus.edu.br </strong>
         </p>
         
-        <button className={styles.btn} onClick={() => window.open("https://www.instagram.com/naf.unichristus/", "_blank")}>Entre em Contato</button>
+        <button className={styles.btn} onClick={abrirModal}>Entre em Contato</button>
       </div>
+
+      {showModal && (
+        <div className={styles.modalOverlay} onClick={fecharModal}>
+          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            {!emailEnviado ? (
+              <>
+                <h2 className={styles.modalTitulo}>Entre em Contato</h2>
+                <form onSubmit={enviarEmail} className={styles.modalForm}>
+                  <div className={styles.modalInput}>
+                    <label htmlFor="nome">Nome:</label>
+                    <input
+                      type="text"
+                      id="nome"
+                      value={nome}
+                      onChange={(e) => setNome(e.target.value)}
+                      placeholder="Digite seu nome"
+                      required
+                    />
+                  </div>
+
+                  <div className={styles.modalInput}>
+                    <label htmlFor="email">Email:</label>
+                    <input
+                      type="email"
+                      id="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Digite seu email"
+                      required
+                    />
+                  </div>
+
+                  <div className={styles.modalInput}>
+                    <label htmlFor="mensagem">Qual a sua dúvida?</label>
+                    <textarea
+                      id="mensagem"
+                      value={mensagem}
+                      onChange={(e) => setMensagem(e.target.value)}
+                      placeholder="Digite sua mensagem"
+                      rows="5"
+                      required
+                    />
+                  </div>
+
+                  <button type="submit" className={styles.modalBtnEnviar}>
+                    ENVIAR E-MAIL
+                  </button>
+                </form>
+              </>
+            ) : (
+              <div className={styles.sucessoContainer}>
+                <div className={styles.checkIcon}>✓</div>
+                <h2 className={styles.sucessoTitulo}>Email Enviado!</h2>
+                <p className={styles.sucessoMensagem}>Sua mensagem foi enviada com sucesso.</p>
+                <button onClick={fecharModal} className={styles.modalBtnOk}>
+                  OK
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 }

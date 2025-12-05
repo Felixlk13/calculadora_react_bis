@@ -21,6 +21,8 @@
     background-color: rgb(65,105,226);
     border-radius: 10px;
     color: #fff;
+    padding: 15px;
+    font-weight: 500;
 }
 
 .input {
